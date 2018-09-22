@@ -1,4 +1,4 @@
-# OMBD
+# OMDb
 
 ## install
 
@@ -18,9 +18,7 @@ Structure of DB
 - MovieDB
   - movies
   - comments
-- MovieDB_test
-  - movies
-  - comments
+
   
   ## Usage
   

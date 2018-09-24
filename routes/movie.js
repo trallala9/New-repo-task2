@@ -9,9 +9,9 @@ let keyAPI = '&apikey=6d0c45ad'; //API key for OMDB
 function getMovies(req, res) {
 
     let query = Movie.find({});
-    query.exec((err, movies) => {
+    query.exec((err, movies,) => {
         if (err) res.send(err);
-
+       
         res.json(movies);
     })
 }

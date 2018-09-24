@@ -7,6 +7,8 @@ let movie = require('./routes/movie');
 let comment = require('./routes/comment');
 let config = require('config'); //db connects from config
 
+
+app.set('view engine', 'ejs');
 //db options
 let options = { 
     server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
@@ -23,6 +25,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));               
 app.use(bodyParser.text());                                    
 app.use(bodyParser.json({ type: 'application/json'}));  
+
+app.use(function (error, req, res, next) {
+  if(error instanceof SyntaxError){ //Handle SyntaxError here.
+    return res.status(500).send({data : "Invalid data"});
+  } else {
+    next();
+  }
+});
+
 
 //GET & POST for /movies
 app.route('/movies')

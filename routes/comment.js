@@ -42,7 +42,7 @@ function postComment(req, res) {
         if (!response) {
             res.json({Error: 'No movie in db'});
         } else {
-            var obj = Object.assign({}, { Title: response[0].Title }, { MovieID: response[0]['_id'] }, { comment: req.body.comment });
+            var obj = Object.assign({}, { Title: response[0].Title }, { MovieID: response[0]['id'] }, { comment: req.body.comment });
             var newComment = new Comment(obj);
             newComment.save((err, comment) => {
                 if (err) {

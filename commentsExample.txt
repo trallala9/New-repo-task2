@@ -1,0 +1,24 @@
+onnecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 4.0.2
+Server has startup warnings:
+2018-09-24T17:09:03.279+0200 I CONTROL  [initandlisten]
+2018-09-24T17:09:03.279+0200 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-09-24T17:09:03.280+0200 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-09-24T17:09:03.280+0200 I CONTROL  [initandlisten]
+---
+
+---
+> show collections
+> use MovieDB
+switched to db MovieDB
+> show collections
+comments
+movies
+> db.comments.find();
+{ "_id" : "5ba94de3f6ebae04a01bfb1a", "Title" : "Get Out", "comment" : "cool" }
+{ "_id" : "5ba94e67f6ebae04a01bfb1b", "Title" : "American Pie", "comment" : "nice" }
+{ "_id" : "5ba68b03ce62b3061c29318a", "Title" : "Bride of Chucky", "comment" : "comment example" }
+{ "_id" : ObjectId("5baa1003da7aab20244fc837"), "Title" : "Bride of Chucky", "comment" : "why", "createdAt" : ISODate("2018-09-25T10:37:55.126Z") }
+{ "_id" : ObjectId("5baa1134da7aab20244fc839"), "Title" : "Catch Me If You Can", "comment" : "Comments work just fine", "createdAt" : ISODate("2018-09-25T10:43:00.739Z") }
+{ "_id" : ObjectId("5baa118cda7aab20244fc83b"), "Title" : "The Many Adventures of Winnie the Pooh", "comment" : "Comments required here", "createdAt" : ISODate("2018-09-25T10:44:28.571Z") }
+{ "_id" : ObjectId("5baa13cbda7aab20244fc83d"), "Title" : "The Rock", "comment" : "Comments welcome", "createdAt" : ISODate("2018-09-25T10:54:03.521Z") }

@@ -10,7 +10,7 @@ Required:
 ### npm install
 Please use **npm install** in /app directory to install packages from package.json
 ### MongoDB 
-MongoDB is a NotSQL database. It stores documents as objects, which helps trasnfering data from OMBD API to MongoDB.
+MongoDB is a NotSQL database. It stores documents as objects, which helps trasnfering data from OMDB API to MongoDB.
 
 MongoDB should be on localhost and listens 27017 port. 
 
@@ -18,6 +18,10 @@ Structure of DB
 - MovieDB
   - movies
   - comments
+  
+- MovieDB_test
+  - movies
+  - comments 
 
   
   ## Usage
@@ -45,7 +49,7 @@ Additional filtering, sorting is fully optional - but some implementation is a b
 
   **POST /comments**
   
-Request body should contain ID of movie already present in database, and comment text body. **_Done_**
+Request body should contain ID of movie already present in database, and comment text body. **WORKING**
 
 Comment should be saved to application database and returned in request response. **_Done_**
 
@@ -65,6 +69,13 @@ Parsing requests for more coding comfort
 ### mongoose
 Using Schema and much less code for multiple queries. 
 
+### config
+Used just a bit, to use two DB for dev and testing.
 
+### Mocha + chai
+For asynchronous testing. Helps isolating tests from each other. Chai gives BDD / TDD  assertions.
+
+### Testing
+Run **npm test** for test endpoints
 
 

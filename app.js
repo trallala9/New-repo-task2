@@ -9,6 +9,10 @@ let config = require('config'); //db connects from config
 
 
 app.set('view engine', 'ejs');
+
+
+
+
 //db options
 let options = { 
     server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
